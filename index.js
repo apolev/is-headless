@@ -18,7 +18,7 @@ function isHeadless(inconsistentPermissionsState) {
     const isPhantom = window.callPhantom || window._phantom || hasPhantomStacktrace();
     const noChromeProperty = !window.chrome;
     const noPlugins = !navigator.plugins.length;
-    const noLanguages = !!navigator.languages;
+    const noLanguages = !navigator.languages;
 
     return (
         !noUserAgent ||
