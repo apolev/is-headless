@@ -2,7 +2,7 @@ function hasPhantomStacktrace() {
     try {
         null[0]();
     } catch (e) {
-        if (indexOfString(err.stack, 'phantomjs') > -1) {
+        if (e.stack.indexOf('phantomjs') > -1) {
             return true;
         }
     }
