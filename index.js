@@ -21,7 +21,7 @@ function isHeadless(inconsistentPermissionsState) {
     const noLanguages = !navigator.languages;
 
     return (
-        !noUserAgent ||
+        noUserAgent ||
         noLanguages ||
         isHeadlessChrome ||
         isWebdriver ||
