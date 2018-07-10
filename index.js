@@ -40,6 +40,8 @@ function hasInconsistentPermissionsState() {
                 try {
                     if(Notification.permission === 'denied' && permissionStatus.state === 'prompt') {
                         resolve(true);
+                    } else {
+                        resolve();
                     }
                 } catch (e) {
                     resolve();
